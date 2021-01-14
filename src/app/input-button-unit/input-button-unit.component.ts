@@ -10,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
     </p>
 
     <input [value]='title'>
-    <button>Save</button>
+    <button (click)="changeTitle('Button Clicked!')">
+      Save
+    </button>
   `,
   styleUrls: ['./input-button-unit.component.scss']
 })
