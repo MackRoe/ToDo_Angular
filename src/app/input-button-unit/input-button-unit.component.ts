@@ -1,3 +1,4 @@
+import { MethodCall } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,27 +9,21 @@ import { Component, OnInit } from '@angular/core';
       The title is: {{ title }}
     </p>
 
-    <input [value]="title">
+    <input [value]='title'>
     <button>Save</button>
   `,
   styleUrls: ['./input-button-unit.component.scss']
 })
 export class InputButtonUnitComponent implements OnInit {
-  title = "Add An Item";
+  title = "Hello World";
   constructor() {
-    console.log('In constructor')
-    this.changeTitle('Something Entirely Different');
   }
+
+  ngOnInit(): void {}
+  // void is not included in the tutorial
 
   changeTitle(newTitle: string) {
     this.title = newTitle;
-    console.log('Title changed to ' + this.title);
   }
-
-  ngOnInit(): void {
-    // this.title = 'Alternate Title';
-    // It was necessary to comment out the previous line to get the changeTitle method to work.
-  }
-  // void is not included in the tutorial
 
 }
