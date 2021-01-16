@@ -8,29 +8,11 @@ import { TodoItem } from './interfaces/todo-item';
       Welcome to {{ title }}, your personal custom made To-Do List!
     </h1>
 
-    <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
-
-    <ul>
-      <li *ngFor="let todoItem of todoList">
-        <app-todo-item [item]></app-todo-item>
-      </li>
-    </ul>
+    <app-list-manager></app-list-manager>
   `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-  // mock data
-  todoList: TodoItem[] = [
-    {title: 'install NodeJS'},
-    {title: 'install Angular CLI'},
-    {title: 'create new app'},
-    {title: 'serve app'},
-    {title: 'develop app'},
-    {title: 'deploy app'},
-  ];
+  title = 'ManageMe';
 
-  addItem(title: string) {
-    this.todoList.push({ title });
-  }
 }
