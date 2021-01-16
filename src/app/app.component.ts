@@ -4,7 +4,7 @@ import { TodoItem } from './interfaces/todo-item';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>
+    <h1 class="app-title">
       Welcome to {{ title }}, your personal custom made To-Do List!
     </h1>
 
